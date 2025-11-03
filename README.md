@@ -14,6 +14,13 @@ This project investigates whether forest loss across U.S. states is associated w
 - `README.md` — project overview
 - `requirements.txt` — Python dependencies
 
+## Project Files
+- [Notebooks](notebooks/)
+- [Figures](figures/)
+[View Biodiversity Map](figures/biodiversity_map.html)
+
+
+
 ## ⚙️ Dependencies
 Install required libraries with:
 ```bash
