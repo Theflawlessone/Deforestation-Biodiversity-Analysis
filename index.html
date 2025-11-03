@@ -6,12 +6,12 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
             padding: 20px;
             line-height: 1.6;
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #2c3e50;
         }
         a {
@@ -28,68 +28,104 @@
         li {
             margin: 8px 0;
         }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+        }
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
     </style>
 </head>
 <body>
-    <h1>Deforestation and Biodiversity in U.S. Forests (2019–2021)</h1>
-    <p>This project investigates whether forest loss across U.S. states is associated with changes in biodiversity indicators such as species richness and threatened/endangered species counts.</p>
 
-    <div class="section">
-        <h2>📊 Key Findings</h2>
-        <ul>
-            <li>Plot_count (a proxy for fragmentation) was the strongest predictor of deforestation.</li>
-            <li>Species richness and TE species counts were weak predictors in the short term.</li>
-            <li>Temperature showed emerging correlation with threatened species (R² ≈ 0.21).</li>
-        </ul>
-    </div>
+<h1>Deforestation and Biodiversity in U.S. Forests (2019–2021)</h1>
 
-    <div class="section">
-        <h2>📂 Notebook</h2>
-        <p>Open the original Jupyter notebook in Google Colab for interactive execution:</p>
-        <ul>
-            <li>
-                <a href="https://colab.research.google.com/github/theflawlessone/Deforestation-Biodiversity-Analysis/blob/main/notebooks/Deforestation_on_Biodiversity.ipynb" target="_blank">
-                    Deforestation_on_Biodiversity.ipynb
-                </a>
-            </li>
-        </ul>
-    </div>
+<p>This project investigates whether forest loss across U.S. states is associated with changes in biodiversity indicators such as species richness and threatened/endangered species counts. It also evaluates temperature effects and seasonal patterns on biodiversity risk.</p>
 
-    <div class="section">
-        <h2>🖼 Figures & Maps</h2>
+<!-- Key Findings -->
+<div class="section">
+    <h2>📊 Key Findings</h2>
+    <ul>
+        <li>Plot_count (a proxy for survey density/fragmentation) was the strongest predictor of deforestation.</li>
+        <li>Species richness and threatened/endangered species (TE) counts were weaker predictors in the short‐term dataset.</li>
+        <li>Incorporating average temperature improved model explanatory power (≈ +20%) and showed a statistically significant positive relationship with TE species counts (R² ≈ 0.21, p ≈ 0.0327).</li>
+        <li>Seasonal models (spring, summer, autumn, winter) showed stronger temperature–biodiversity relationships (R² ≈ 0.50–0.54) compared to annual models.</li>
+    </ul>
+</div>
 
-        <h3>Biodiversity Maps</h3>
-        <ul>
-            <li><a href="figures/biodiversity_map.html" target="_blank">Biodiversity Map</a></li>
-            <li><a href="figures/combined_biodiversity_temperature_map.html" target="_blank">Combined Biodiversity & Temperature Map</a></li>
-        </ul>
+<!-- Notebook -->
+<div class="section">
+    <h2>📂 Notebook</h2>
+    <p>Open the original Jupyter notebook in Google Colab for interactive execution:</p>
+    <ul>
+        <li><a href="https://colab.research.google.com/github/theflawlessone/Deforestation-Biodiversity-Analysis/blob/main/notebooks/Deforestation_on_Biodiversity.ipynb" target="_blank">Deforestation_on_Biodiversity.ipynb</a></li>
+    </ul>
+</div>
 
-        <h3>Temperature Maps by Year</h3>
-        <ul>
-            <li><a href="figures/temperature_map_2019.html" target="_blank">Temperature Map 2019</a></li>
-            <li><a href="figures/temperature_map_2020.html" target="_blank">Temperature Map 2020</a></li>
-            <li><a href="figures/temperature_map_2021.html" target="_blank">Temperature Map 2021</a></li>
-            <li><a href="figures/temperature_map_2022.html" target="_blank">Temperature Map 2022</a></li>
-        </ul>
+<!-- Figures & Maps -->
+<div class="section">
+    <h2>🖼 Figures & Maps</h2>
 
-        <h3>Temperature Maps (Multiple Years & Seasons)</h3>
-        <ul>
-            <li><a href="figures/temperature_maps_2019_2022.html" target="_blank">Temperature Maps 2019–2022</a></li>
-            <li><a href="figures/temperature_maps_seasons_2019.html" target="_blank">Temperature Maps by Seasons 2019</a></li>
-            <li><a href="figures/temperature_maps_seasons_2020.html" target="_blank">Temperature Maps by Seasons 2020</a></li>
-            <li><a href="figures/temperature_maps_seasons_2021.html" target="_blank">Temperature Maps by Seasons 2021</a></li>
-        </ul>
-    </div>
+    <h3>Biodiversity Maps</h3>
+    <ul>
+        <li><a href="figures/biodiversity_map.html" target="_blank">Biodiversity Map</a></li>
+        <li><a href="figures/combined_biodiversity_temperature_map.html" target="_blank">Combined Biodiversity & Temperature Map</a></li>
+    </ul>
 
-    <div class="section">
-        <h2>⚙️ Dependencies</h2>
-        <p>Install required Python libraries with:</p>
-        <pre><code>pip install -r requirements.txt</code></pre>
-    </div>
+    <h3>Temperature Maps by Year</h3>
+    <ul>
+        <li><a href="figures/temperature_map_2019.html" target="_blank">Temperature Map 2019</a></li>
+        <li><a href="figures/temperature_map_2020.html" target="_blank">Temperature Map 2020</a></li>
+        <li><a href="figures/temperature_map_2021.html" target="_blank">Temperature Map 2021</a></li>
+        <li><a href="figures/temperature_map_2022.html" target="_blank">Temperature Map 2022</a></li>
+    </ul>
+
+    <h3>Temperature Maps (Multiple Years & Seasons)</h3>
+    <ul>
+        <li><a href="figures/temperature_maps_2019_2022.html" target="_blank">Temperature Maps 2019–2022</a></li>
+        <li><a href="figures/temperature_maps_seasons_2019.html" target="_blank">Temperature Maps by Seasons 2019</a></li>
+        <li><a href="figures/temperature_maps_seasons_2020.html" target="_blank">Temperature Maps by Seasons 2020</a></li>
+        <li><a href="figures/temperature_maps_seasons_2021.html" target="_blank">Temperature Maps by Seasons 2021</a></li>
+    </ul>
+</div>
+
+<!-- Final Report -->
+<div class="section">
+    <h2>📄 Final Report</h2>
+
+    <h3>Hypothesis & Objectives</h3>
+    <p>States experiencing higher deforestation and rising temperature threats between 2019–2021 will also show lower biodiversity, reflected by reduced species richness and higher threatened/endangered species counts.</p>
+    <ul>
+        <li>Quantify biodiversity across U.S. states using national park species data.</li>
+        <li>Integrate deforestation and climate data to identify environmental predictors of biodiversity change.</li>
+        <li>Develop and evaluate regression models linking temperature, deforestation, and park acreage to biodiversity outcomes such as plot count, nativeness, and species richness.</li>
+        <li>Assess statistical significance, multicollinearity, model fit, stability, and predictive potential of environmental variables related to TE species counts.</li>
+    </ul>
+
+    <h3>Abstract</h3>
+    <p>This study investigates the combined effects of deforestation and temperature on biodiversity across U.S. forests and national parks from 2019 to 2021. Using data from the U.S. Forest Service Forest Inventory and Analysis (FIA) and the National Park Service biodiversity dataset, multiple linear regression models were developed to test how forest loss relates to ecological features such as species richness, threatened and endangered species counts, plot count, protected acreage, and nativeness. Data preprocessing included standardising state identifiers, merging forest and biodiversity metrics, log‑transforming skewed variables, and excluding states with incomplete records. Regression results indicated that plot count was the strongest and most consistent predictor of forest loss, while species richness and threatened species counts showed weaker relationships. Incorporating protected acreage and nativeness improved model stability, increasing adjusted R² by about 8% and reducing multicollinearity. When temperature was added, the model’s explanatory power increased by roughly 20%, though validation models yielded negative R² values, suggesting temperature alone was insufficient. Overall, results highlight that short‑term biodiversity indicators may not fully capture the ecological impacts of deforestation at a statewide scale.</p>
+
+    <h3>Interpretations</h3>
+    <p>The analyses suggest that short-term deforestation effects on biodiversity may take longer to manifest. Temperature consistently emerged as a stronger immediate predictor of threatened/endangered species counts, while park acreage moderated these risks. Seasonal models indicate that warm-season stress amplifies species vulnerability.</p>
+
+    <h3>Conclusions & Next Steps</h3>
+    <p>In summary, temperature appears to be a more proximal driver of biodiversity risk than deforestation within 2019–2021. Plot_count reflects survey intensity or landscape fragmentation rather than true causal effects. Conservation areas provide a buffering effect. Future work should expand temporal and spatial coverage, integrate additional environmental stressors, and apply advanced modeling techniques for predictive insights.</p>
+</div>
+
+<!-- References & Data Access -->
+<div class="section">
+    <h2>📚 References & Data Access</h2>
+    <ul>
+        <li>Betts, M. G., & Yang, Z. (2022). Forest degradation drives widespread avian habitat and population declines. <em>Nature Ecology & Evolution</em>, 6(6), 709–719. <a href="https://www.nature.com/articles/s41559-022-01737-8" target="_blank">Link</a></li>
+        <li>Li, Z., & Tong, X. (2023). Contemporary biodiversity patterns are affected by climate change at multiple temporal scales. <em>Biogeosciences</em>, 20, 2869–2882. <a href="https://bg.copernicus.org/articles/20/2869/2023/" target="_blank">Link</a></li>
+        <li>National Park Service. U.S. National Parks Biodiversity Dataset. Kaggle, 2023. <a href="https://www.kaggle.com/datasets/nps-biodiversity" target="_blank">Link</a></li>
+        <li>U.S. Forest Service. Forest Inventory and Analysis (FIA) Deforestation Estimates. <a href="https://www.fia.fs.usda.gov/" target="_blank">Link</a></li>
+        <li>Wong, J. R. (2023). Average Monthly Temperature by U.S. State. Kaggle. <a href="https://www.kaggle.com/datasets/justinrwong/average-monthly-temperature-by-us-state" target="_blank">Link</a></li>
+        <li><strong>Project Datasets (Google Drive):</strong> <a href="https://drive.google.com/drive/folders/1c84LaLj2T4c4EN0RzQPdmtAh3UoFJjux?usp=drive_link" target="_blank">Access datasets here</a></li>
+    </ul>
+</div>
 
 </body>
 </html>
-
